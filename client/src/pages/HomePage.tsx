@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { BarChart3, Sparkles, Share2, MessageSquare } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { BarChart3, Sparkles, Share2, MessageSquare, User } from 'lucide-react'
 import { analyzeData } from '../api'
 import { exampleDatasets } from '../data/examples'
 import AnalysisResults from '../components/AnalysisResults'
@@ -69,9 +70,13 @@ export default function HomePage() {
             <BarChart3 className="w-8 h-8 text-indigo-500" />
             <h1 className="text-2xl font-bold text-white">PasteBI</h1>
           </div>
-          <p className="text-gray-400 text-sm hidden sm:block">
-            AI-powered data analysis in seconds
-          </p>
+          <Link 
+            to="/about" 
+            className="flex items-center gap-1 text-gray-400 hover:text-white transition-colors text-sm"
+          >
+            <User className="w-4 h-4" />
+            <span className="hidden sm:inline">About</span>
+          </Link>
         </div>
       </header>
 
