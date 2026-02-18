@@ -24,7 +24,7 @@ app.get('/api/health', (_, res) => {
 });
 
 // Serve static files from React build in production
-const clientDistPath = path.join(__dirname, '../../client/dist');
+const clientDistPath = path.join(__dirname, '../../../../client/dist');
 app.use(express.static(clientDistPath));
 
 // Handle React routing - serve index.html for all non-API routes
